@@ -1,9 +1,8 @@
 <?php
 
-
-abstract class Empleado
+class Empleado
 {
-    public $id;
+    protected $id;
     protected $nombre;
     protected $apellido;
     protected $edad;
@@ -18,13 +17,20 @@ abstract class Empleado
     }
 
 
-    public function getDatos(){
-
+    public function getDatos()
+    {
     }
 
 
+    public function GetEdad(){
+
+     return $this->edad;
+
+    }
+
+    public function GetId(){
 
 
-
-    
+        return $this->id;
+    }
 } //termina la clase

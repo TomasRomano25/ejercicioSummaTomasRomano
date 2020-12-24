@@ -48,7 +48,7 @@ function getEmpleadoById(int $id, $listaEmpleados)
 
         foreach ($listaEmpleados as $empleado) {
 
-            if ($empleado->id == $id) {
+            if ($empleado->getId() == $id) {
 
                 echo $empleado->getDatos();
             }
@@ -58,3 +58,23 @@ function getEmpleadoById(int $id, $listaEmpleados)
         echo 'Error, los campos estan vacios, Porfavor Vuelve a Intentarlo.';
     }
 }
+
+
+//Calcular Promedio de edad en los empleados de la empresa.
+function calcularPromedioEdad($listaEmpleados){
+$suma = 0;
+$cantidadDeEmpleados = count($listaEmpleados);
+    foreach ($listaEmpleados as $empleado){
+
+    $suma += $empleado->getEdad();
+
+
+    }
+
+echo '<h1> Promedio de edad en los empleados de la empresa </h1>';
+echo ($suma / $cantidadDeEmpleados);
+
+}
+
+
+calcularPromedioEdad($listaEmpleados);
