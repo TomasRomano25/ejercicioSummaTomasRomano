@@ -27,12 +27,18 @@ array_push($listaEmpleados, $MartinGomez);
 array_push($listaEmpleados, $MartinaRodriguez);
 
 
+function imprimirListaDeEmpleados($listaEmpleados){ 
+
 echo '<h2>Lista de Empleados</h2>';
 foreach ($listaEmpleados as $empleado) {
 
     echo $empleado->getDatos();
     echo '<br>';
 }
+}
+
+imprimirListaDeEmpleados($listaEmpleados);
+
 
 //para buscar un empleado por id necesitan pasar por parametro el id en primer lugar y la lista en donde se encuentra.
 getEmpleadoById(1, $listaEmpleados);
